@@ -1,0 +1,7 @@
+/venv/
+.idea
+experiments
+/files/test_xl.xlsx
+/files/~$test_xl.xlsx
+/journal/journal.py
+/journal/journals/07-21-24.txt
