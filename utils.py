@@ -1,4 +1,12 @@
+from enum import StrEnum
+
 FILEPATH = 'files/todos.txt'
+
+
+class Event(StrEnum):
+    ADD = 'Add'
+    EXIT = 'Exit'
+
 
 def print_todo_with_number(todo_list, todo):
     """ Prints each item in a list prefixed by it's index + 1 """
@@ -29,7 +37,7 @@ def get_todos(file_path=FILEPATH):
 def save_todo(new_todo, file_path=FILEPATH):
     """ Saves the list items to the file path file. """
     todos_data = get_todos(file_path)
-    todos_data.append(new_todo)
+    todos_data.append(new_todo.capitalize() + '\n')
 
     # context manager
     with open(file_path, 'w') as file:
@@ -45,4 +53,3 @@ def update_all_todos(todo_list, file_path=FILEPATH):
 def get_index_from_string(str):
     """ Returns an int index value that whose count starts with 1 """
     return int(str) - 1
-
