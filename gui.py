@@ -26,5 +26,6 @@ while True:
             ut.save_todo(values['todo'])
         case ut.Event.EXIT:
             break
-
+            
+            
 window.close()
